@@ -1,12 +1,30 @@
-const toto = {
-     lastname: "momo", firstname: "momo", age:23
+const data = {
+     lastname: "momo",
+    firstname: "momo",
+    age:23,
+  names:  [{id:1,message: "Hello"},
+           {id:2,message: "GoodBye"},
+           {id:3,message: "Ciao"},
+],
 };
 
-ReactDOM.render(
-    <App {...toto} />,
-    document.querySelector("#root")
-);
-
+function renderApp(){
+    ReactDOM.render(
+        // <App {...data} />,
+        <App
+            lastname={"joh"}
+            names={[
+                {id:1,message: "Hello"},
+                {id:2,message: "GoodBye"},
+                {id:3,message: "Ciao"},
+            ]}
+            firstname={"huo"}
+            age={20}
+        />,
+        document.querySelector("#root")
+    );
+}
+renderApp();
 
 
 
